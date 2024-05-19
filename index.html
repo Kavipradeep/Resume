@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 10;
+            padding: 10;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 24cm; /* A4 width */
+            height: 29.7cm; /* A4 height */
+            margin: auto;
+            display: flex;
+        }
+
+        .left-section {
+            width: 65%; /* 3/4 of the page */
+            background-color: #fff; /* Grey background color */
+            padding: 20px;
+            border: 5px solid #001933; /* Black border */
+        }
+        .left-section h3{
+            font-size: 16px;
+			color: #000;
+        }
+        .left-section h5{
+            font-size: 16px;
+			color: #000;
+        }
+        p1 {
+            font-size: 13px; /* Adjust font size for p */
+            color: #222; /* Change font color for p */
+            margin-bottom: 5px; /* Adjust spacing */
+        }		
+        p3 {
+            font-size: 13px; /* Adjust font size for p */
+		}
+		mark {
+            background-color: #e0ffff; /* Change to desired highlight color */
+            color: black; /* Optional: Change text color */
+        }
+
+        .right-section {
+            width: 34%; /* 1/4 of the page */
+            background-color: #001933;
+            color: #fff;
+            padding: 25px;
+            position: relative; /* Added position relative */
+        }
+
+        .contact-box {
+            position: absolute;
+            top: 5px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 45px;
+			padding-top: 18px; /* Decrease top padding to reduce height */
+            padding-bottom: 25px; /* Decrease bottom padding to reduce height */
+            max-width: 80%; /* Limit the width */
+        }
+
+        .contact {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+
+        .contact li {
+            margin-bottom: 2px;
+			padding-left: 0px;
+        }
+
+        .contact li a {
+            color: #222; /* Link color */
+            text-decoration: none; /* Remove underline */
+            font-size: 12px; /* Adjust the font size as needed */
+        }
+
+        .contact li .icon {
+            margin-right: 5px;
+			margin-left: -5px;
+        }
+
+        .contact li span {
+            font-size: 12px; /* Adjust the font size of the contact information */
+			margin-left: -5px;
+        }
+
+        .address {
+            display: flex;
+            align-items: center;
+        }
+
+        .address .icon {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        .address div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            font-size: 30px;
+            margin-bottom: 0; /* Reduce margin bottom */
+            margin-top: 0px; /* Adjust margin top */
+        }
+
+        .role {
+            font-size: 18px;
+			text-decoration: underline; /* Add underline */
+			color: #daa520;
+            margin-top: 5px; /* Adjust margin top */
+        }
+        .skill-box {
+            position: absolute;
+            top: 202px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 25px;
+			padding-top: 12px; /* Decrease top padding to reduce height */
+            padding-bottom: 12px; /* Decrease bottom padding to reduce height */
+            max-width: 80%; /* Limit the width */
+        }
+
+        .skill {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+
+        .skill li {
+            margin-bottom: 4px;
+        }
+
+        .skill li .icon {
+            margin-right: 5px;
+        }
+
+        .skill li span {
+            font-size: 12px; /* Adjust the font size of the skill information */
+        }
+		h5 {
+		    font-size: 15px;
+			color: #000;
+            margin-top: 0px;
+		}
+        p9 {
+            font-size: 13px; /* Adjust font size for p */
+		}
+        .interest-box {
+            position: absolute;
+            top: 891px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 90px;
+			padding-top: 15px; /* Decrease top padding to reduce height */
+            padding-bottom: 62px; /* Decrease bottom padding to reduce height */
+            max-width: 60%; /* Limit the width */
+        }
+        .interest {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+
+        .interest li {
+            margin-bottom: 4px;
+            margin-right: 5px;
+		}
+
+        .personalskill-box {
+            position: absolute;
+            top: 5px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 90px;
+			padding-top: 14px; /* Decrease top padding to reduce height */
+            padding-bottom: 33px; /* Decrease bottom padding to reduce height */
+            max-width: 60%; /* Limit the width */
+        }
+        .personalskill {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+        .extra-box {
+            position: absolute;
+            top: 282px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 90px;
+			padding-top: 14px; /* Decrease top padding to reduce height */
+            padding-bottom: 21px; /* Decrease bottom padding to reduce height */
+            max-width: 60%; /* Limit the width */
+        }
+        .extra {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+        .hobbies-box {
+            position: absolute;
+            top: 554px;
+            right: 7px;
+            background-color: #ffffff; /* Light grey background color */
+            color: #fff;
+            border: 5px solid #daa520;
+            padding: 90px;
+			padding-top: 14px; /* Decrease top padding to reduce height */
+            padding-bottom: 66px; /* Decrease bottom padding to reduce height */
+            max-width: 60%; /* Limit the width */
+        }
+        .hobbies {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            color: #222; /* Text color */
+        }
+
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1 class="name">KAVIPRADEEP KARTHIKEYAN</h1>
+            <h2 class="role">Data Engineer | Big Data Developer</h2>
+			<h3>SUMMARY:</h3>
+			    <p>An extensive 3 years in developing as well as consulting solutions on <strong><mark>Python</mark></strong>, <strong><mark>Big Data</mark></strong> applications spanning across technologies and business domains.A technology Evangelist on various technologies such as Big Data(<strong><mark>Hadoop, Hive, Spark</mark></strong>).            <h4>WORK EXPERIENCE HIGHLIGHTS:</h4>
+			    <ul>
+				    <li>Having experience in framework development in particular Big data related projects.</li>
+					<!-- <li>Published Big Data Blog in (link)</li> -->
+				    <li>Big Data Enthusiast and successfully completed the Big Data Training in Infosys.</li>
+					<li>Working in Agile Methodology with JIRA as a bug tracking tool.</li>
+				</ul>
+            <h5>PROFESSIONAL EXPERIENCE:</h5>
+			    <ul>
+				    <li>Current Organization as a <strong><mark>Data Engineer</mark></strong> in the role of <mark><strong>Senior System Engineer</strong></mark> in <strong><mark>Infosys</mark></strong>. (From July 2021 - Present)</li>
+					    <p1>Responsible for Technology Assessment on Big Data technologies</p1>
+				</ul>
+            <h5>PROJECT DETAILS:</h5>
+			    			    <ul>
+				    <p><strong>Audit Analytics Platform (AAP)</strong></p>
+					    <p3>ROLE: Hadoop Developer</p3>
+                        <p class="space"></p>						
+						<p3>LOB: Banking</p3>
+						<p class="space"></p>
+						<p3>TECHNOLOGY: Hadoop(Hive),Spark, Scala ,Autosys</p3>
+						<p class="space"></p>
+						<p3>DESCRIPTION: It is to help organizations analyze and monitor their financial and operational data for auditing purposes. These platforms typically integrate with various data sources. Get the source data and tranfer the data to Hadoop and implements Business Logics for Analytics purpose. </p3>
+						<p class="space"></p>
+						<p3>RESPONSIBILITIES:
+						    <p class="space"></p>
+						    <li>Involved in end to end development of framework to implement business requirement.</li>
+							<li>Provided technical support and resolved production issues in a timely manner and worked with cross functional teams to troubleshoot and resolving issues.</li>
+							<li>Involved in performing Calculation query for the analytics as per the Business Requirement. </li>
+							<li>Created JIL files to schedule the jobs in Autosys to monitor/verify its completion, ensure consistent and reliabble service delivery.</li>
+						</p3>
+				</ul>
+			    <ul>
+				    <p><strong>Teradata to Hadoop Migration(T2H)</strong></p>
+					    <p3>ROLE: Hadoop Developer</p3>
+                        <p class="space"></p>						
+						<p3>LOB: Banking</p3>
+						<p class="space"></p>
+						<p3>TECHNOLOGY: Hadoop(Hive), Spark, Autosys ,Teradata, Mainframe ,BladeBridge</p3>
+						<p class="space"></p>
+				</ul>
+		</div>
+        <div class="right-section">
+            <div class="contact-box">
+                <ul class="contact">
+                    <li><i class="fas fa-folder icon"></i> <span><a href="https://kavipradeep.github.io/Portfolio/"><strong>https://kavipradeep.github.io/Portfolio/</strong></a></span></li>
+                    <li><i class="fas fa-phone-alt icon"></i> <span><strong>9500485001</strong></span></li>
+                    <li><i class="fas fa-envelope icon"></i> <span><a href="mailto:kavipradeepvkl@gmail.com"><strong>kavipradeepvkl@gmail.com</strong></a></span></li>
+                    <li><i class="fab fa-linkedin icon"></i> <span><a href="https://www.linkedin.com/in/kavipradeep-k-2601261b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><strong>linkedin.com/in/kavipradeep-k-2601261b7</strong></a></span></li>
+                    <!-- <li><i class="fab fa-github icon"></i> <span><a href="https://github.com/Kavipradeep"><strong>github.com/Kavipradeep</strong></a></span></li>  -->
+                    
+                    <li class="address">
+                        <i class="fas fa-map-marker-alt icon"></i><span><strong>Chennai</strong></span>
+                    </li>
+                </ul>
+            </div>
+
+		    <div class="skill-box">
+		<h5>TECHNICAL SKILL</h5>
+        <ul class="skill">
+            <li>
+				<p9><i class="fas fa-code"></i> <strong>Programming Language:</strong> Python, SQL</p9>
+                <p class="space"></p>
+                <p9><i class="fas fa-cogs"></i> <strong>Data Processing:</strong> Hadoop(Map Reduce,Hive), Spark</p9>
+				<p class="space"></p>
+                <p9><i class="fas fa-cloud-upload-alt"></i> <strong>Data Ingestion:</strong> Sqoop</p9> 
+			    <p class="space"></p>
+				<p9><i class="fas fa-database"></i> <strong>NoSQL DB:</strong> HBase</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-clock"></i> <strong>Workflow Scheduler:</strong> Oozie, Autosys</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-layer-group"></i> <strong>Hadoop Distribution:</strong> Apache, Hortonworks, EMR</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-tasks"></i> <strong>Data Management:</strong> Yarn </p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-chart-line"></i> <strong>Visualization:</strong> Power BI</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-desktop"></i> <strong>Operating System:</strong> Windows, Linux</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-database"></i> <strong>Database:</strong> MySQL</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-laptop"></i> <strong>IDEs & Framework:</strong> Eclipse, Intelligi, MS Office</p9>
+				<p class="space"></p>
+                <p9><i class="fas fa-wrench"></i> <strong>Emulator:</strong> Putty, WinSCP</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-cloud"></i> <strong>Hosting Server:</strong> BitBucket</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-globe"></i> <strong>Web Technologies:</strong> HTML, CSS</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-laptop"></i> <strong>Software Development:</strong> Agile Methodology</p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-bug"></i> <strong>Bug Tracking Tools:</strong> JIRA</p9>
+            </li>
+        </ul>
+            </div>
+			<div class="interest-box">
+		<h5>INTERESTS</h5>
+        <ul class="interest">
+            <li style="text-align: left;">
+				<p9><i class="fas fa-heart"></i> BIG DATA TECHNOLOGIES </p9>
+				<p class="space"></p>
+				<p9><i class="fas fa-heart"></i> WEB DEVELOPMENT </p9>
+		    </li>
+        </ul>
+		    </div>
+        </div>
+	</div>
+	<p class="space"></p>
+	<div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <style>
+                /* CSS to remove bullet points */
+                .education {
+                    list-style-type: none;
+                    padding-left: 0; /* Optional: Removes default padding */
+                }
+            </style>
+            <h5>PROJECT DETAILS:</h5>
+			    <ul>
+				    <p><strong>Teradata to Hadoop Migration(T2H)</strong></p>
+						<p3>DESCRIPTION: Migrating from Teradata to Hadoop involves transferring data infrastructure to a distributed, Scalable ecosystem for enhanced analytics and cost efficiency. </p3>
+						<p class="space"></p>
+						<p3>RESPONSIBILITIES:
+						    <p class="space"></p>
+						    <li>Participated in implementing the analysis report based on requirement and design discussions and working on high level design document.</li>
+							<li>Implement data collection and other stategies that optimize efficiency and data quality.</li>
+							<li>Performed code conversion to target data model and download the Teradata script from Mainframe and converted to Hadoop.</li>
+							<li>Involved in code peer reviews and code walkthroughs.</li>
+						</p3>
+				</ul>
+            <h5>TRAININGS & CERTIFICATIONS:</h5>
+			    <ul>
+				    <li>Infosys Certified Big Data Developer</li>
+					<p class="space"></p>
+				    <li>Infosys Certified Python Associate</li>
+					<p class="space"></p>
+				    <li>Infosys Certified Unix Developer</li>
+					<p class="space"></p>
+				    <li>Infosys Certified Agile Developer</li>
+				</ul>            
+            <h5>EDUCATION:</h5>
+            <ul class="education">
+                <li>
+                    <span>COLLEGE : Nandha Engineering College (AUTONOMOUS)</span>
+                </li>
+                <li>
+                    <p9><i class="fas fa-graduation-cap icon"></i>  <strong>BACHELOR OF ENGINEERING (B.E)</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGPA: 8.3</p9>
+                    <p class="space"></p>
+                    <p4 style="position: relative; font-size: 12px; color: #808000; top: -5px; right: -10px; margin-bottom: 0;">2017-2021</p4>
+                </li>
+                <li>
+                    <span>SCHOOL :  Kongu Vellalar Matriculation Higher Secondary School</span>
+                </li>
+                <li>
+                    <p9><i class="fas fa-book icon"></i>  <strong>HSC</strong> - XII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage: 83</p9>
+                    <p class="space"></p>
+                    <p4 style="position: relative; font-size: 12px; color: #808000; top: -5px; right: -10px; margin-bottom: 0;">2016-2017</p4>
+                </li>
+                <li>
+                    <span>SCHOOL :  Kongu Vellalar Matriculation Higher Secondary School</span>
+                </li>
+                <li>
+                    <p9><i class="fas fa-book icon"></i>  <strong>SSLC</strong> - X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentage: 90</p9>
+                    <p class="space"></p>
+                    <p4 style="position: relative; font-size: 12px; color: #808000; top: -5px; right: -10px; margin-bottom: 0;">2014-2015</p4>
+                </li>
+            </ul>
+            <h5>PERSONAL DETAILS:</h5>
+            <ul class="education">
+                <li>
+                    <p9><i class="fas fa-hand-holding-heart"></i>  <strong>FATHER'S NAME:</strong>&nbsp;Mr.KARTHIKEYAN K</p9>
+                    <p class="space"></p>
+                    <p9><i class="fas fa-hand-holding-heart"></i>  <strong>MOTHER'S NAME:</strong>&nbsp;Mrs.LAKSHMI K</p9>
+                    <p class="space"></p>
+                    <p9><i class="fas fa-birthday-cake"></i>  <strong>Date Of Birth:</strong>&nbsp;03 FEB 2000</p9>
+                    <p class="space"></p>
+                    <p9><i class="fas fa-mars"></i>  <strong>GENDER:</strong>&nbsp;Male</p9>
+                    <p class="space"></p>
+                    <p9><i class="fas fa-user"></i>  <strong>MARITAL STATUS:</strong>&nbsp;Single</p9>
+                    <p class="space"></p>
+                    <p9><i class="fas fa-passport"></i>  <strong>NATIONALITY:</strong>&nbsp;Indian</p9>
+                </li>
+            </ul>
+		</div>
+
+            <!-- Content of the left section -->
+		<div class="right-section">
+		    <div class="personalskill-box">
+		        <h5>PERSONAL SKILLS</h5>
+                <ul class="personalskill">
+                    <li>
+		        		<p9><i class="fas fa-thumbs-up"></i> Positive Thinking </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-headphones"></i>  Active Listening </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-hourglass"></i> Hard Working </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-rocket"></i>  Self Motivation </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-random"></i>  Adaptability </p9>
+		            </li>
+                </ul>
+			</div>
+			<div class="extra-box">
+			    <h5>EXTRA CURRICULAR ACTIVITIES</h5>
+                <ul class="personalskill">
+                    <li>
+		        		<p9><i class="fas fa-clipboard"></i> Event Coordinator in department symposium </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-tree"></i></i>  Club Member(Active participant in Tree plantation)</p9>
+		            </li>
+                </ul>
+			</div>
+		    <div class="hobbies-box">
+				<h5>HOBBIES</h5>
+                <ul class="personalskill">
+                    <li>
+		        		<p9><i class="fas fa-search"></i> Surfing the Internet and Youtube </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-music"></i>  Listening Music </p9>
+		        		<p class="space"></p>
+		        		<p9><i class="fas fa-motorcycle"></i> Travelling </p9>
+		            </li>
+                </ul>
+		    </div>
+        </div>
+	</div>
+</body>
+</html>
